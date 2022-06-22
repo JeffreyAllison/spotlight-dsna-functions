@@ -37,3 +37,14 @@ function filter(arr, callback) {
 }
 
 console.log(filter([2, 6, 5], (n) => (n % 2 === 0) | [(2, 6)]));
+
+
+function addX(exPoints) {
+  return(x) =>{
+    return  x + exPoints ;
+  }
+}
+
+const addExcitement = addX('!!!')
+console.log(addExcitement('Hello World'));
+console.log(addExcitement('Pokemon, catch em all'));
