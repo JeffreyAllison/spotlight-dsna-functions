@@ -67,12 +67,31 @@
 // // [cat,lizard,donkey,whale]
 
 
-function fib(n) {
-  if(n === 0) return 0;
-  if(n === 1) return 1;
-  // if(n < 2) {
-  //   return n;
-  // }
-  return fib(n-1) + fib(n - 2); 
+// function fib(n) {
+//   if(n === 0) return 0;
+//   if(n === 1) return 1;
+//   // if(n < 2) {
+//   //   return n;
+//   // }
+//   return fib(n-1) + fib(n - 2); 
+// }
+// console.log(fib(8));
+
+function sum(n) {
+  if (n === 1) return 1;
+  return sum(n - 1) + n;
 }
-console.log(fib(8));
+
+console.log(sum(5));
+
+  ```
+  
+  > **You can assume valid inputs**
+  
+  ## Test Cases
+  
+  Input | Output
+  ---|---
+  5 | 15  (// 1 + 2 + 3 + 4 + 5 = 15)
+  1 | 1 
+  12 | 78
