@@ -48,20 +48,31 @@
 // console.log(addExcitement('Hello World'));
 // console.log(addExcitement('Pokemon, catch em all'));
 
-function addFirst(element) {
-  return (x) => {
-    return x.map((i) => element + i);
-  };
+// function addFirst(element) {
+//   return (x) => {
+//     return x.map((i) => element + i);
+//   };
+// }
+
+// const addOrange = addFirst('orange');
+// console.log(addOrange(['red', 'blue', 'green']));
+// // [orange,red,blue,green]
+// console.log(addOrange(['blue', 'blue', 'blue']));
+// // [orange,blue,blue,blue]
+
+// const addCat = addFirst('cat');
+// console.log(addOrange(['dog', 'bird', 'lizard']));
+// // [cat,dog,bird,lizard]
+// console.log(addOrange(['lizard', 'donkey', 'whale']));
+// // [cat,lizard,donkey,whale]
+
+
+function fib(n) {
+  if(n === 0) return 0;
+  if(n === 1) return 1;
+  // if(n < 2) {
+  //   return n;
+  // }
+  return fib(n-1) + fib(n - 2); 
 }
-
-const addOrange = addFirst('orange');
-console.log(addOrange(['red', 'blue', 'green']));
-// [orange,red,blue,green]
-console.log(addOrange(['blue', 'blue', 'blue']));
-// [orange,blue,blue,blue]
-
-const addCat = addFirst('cat');
-console.log(addOrange(['dog', 'bird', 'lizard']));
-// [cat,dog,bird,lizard]
-console.log(addOrange(['lizard', 'donkey', 'whale']));
-// [cat,lizard,donkey,whale]
+console.log(fib(8));
