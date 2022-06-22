@@ -12,10 +12,13 @@ console.log(assets);
 
 function map(arr, callback) { 
   let newArray = [];
-  arr[i] = arr[i + 1];
-  callback(newArray);
+  for (let i = 0; i< arr.length; i++){
+    const item = arr [i];
+    const modifiedItem = callback(item);
+    newArray[newArray.length] = modifiedItem;
+  }
   return newArray;
 }
-const myArray = [1, 2, 3, 4];
-const newArray = map(myArray, (num) => num * 2);
+const myArray = [1, 6, 5];
+const newArray = map(myArray, (num) => num ** 2);
 console.log(newArray);
